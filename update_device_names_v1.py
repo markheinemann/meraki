@@ -41,7 +41,7 @@ def namechange ( network_name, serial, new_device_name):
 	return
 
 
-#  parse data from csv and convert to a dictionary called conf_dict
+#  parse data from csv and convert to a dictionary called meraki_dict
 meraki_dict = {}
 with open ("update_device_name_list.csv", "r") as csv_file:
 	csv_content = reader(csv_file)
@@ -56,7 +56,7 @@ with open ("update_device_name_list.csv", "r") as csv_file:
 			meraki_dict[device].append(conf[n])
 
 
-# loop through csv and call the function for each device that needs name changing
+# loop through csv and call the function for each column (device) that needs name changing
 
 for device in meraki_dict.keys():
 	network_name = device
