@@ -8,7 +8,7 @@ from csv import reader
 from getpass import getpass
 
 
-print("script to change EMEA Meraki device names\n")
+print("script to change multiple  Meraki device names\n")
 
 #prompt for api key & region Id
 apikey= getpass('api key ?: ')
